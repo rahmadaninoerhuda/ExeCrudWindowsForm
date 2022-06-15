@@ -24,7 +24,16 @@ namespace ExeCrudWindowsForm
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Barang to = new Barang();
+            to.Show();
+        }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Pegawai to = new Pegawai();
+            to.Show();
         }
     }
 }

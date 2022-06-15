@@ -51,6 +51,10 @@
             this.warungDataSet = new ExeCrudWindowsForm.WarungDataSet();
             this.pegawaiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pegawaiTableAdapter = new ExeCrudWindowsForm.WarungDataSetTableAdapters.PegawaiTableAdapter();
+            this.cmdFind = new System.Windows.Forms.Button();
+            this.cmdSave = new System.Windows.Forms.Button();
+            this.cmdDelete = new System.Windows.Forms.Button();
+            this.cmdAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.warungDataSet)).BeginInit();
@@ -192,7 +196,7 @@
             // textBox3
             // 
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pegawaiBindingSource, "Alamat", true));
-            this.textBox3.Location = new System.Drawing.Point(205, 203);
+            this.textBox3.Location = new System.Drawing.Point(205, 198);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 22);
             this.textBox3.TabIndex = 3;
@@ -238,11 +242,51 @@
             // 
             this.pegawaiTableAdapter.ClearBeforeFill = true;
             // 
+            // cmdFind
+            // 
+            this.cmdFind.Location = new System.Drawing.Point(610, 137);
+            this.cmdFind.Name = "cmdFind";
+            this.cmdFind.Size = new System.Drawing.Size(75, 23);
+            this.cmdFind.TabIndex = 21;
+            this.cmdFind.Text = "Find";
+            this.cmdFind.UseVisualStyleBackColor = true;
+            // 
+            // cmdSave
+            // 
+            this.cmdSave.Location = new System.Drawing.Point(610, 75);
+            this.cmdSave.Name = "cmdSave";
+            this.cmdSave.Size = new System.Drawing.Size(75, 23);
+            this.cmdSave.TabIndex = 20;
+            this.cmdSave.Text = "Save";
+            this.cmdSave.UseVisualStyleBackColor = true;
+            // 
+            // cmdDelete
+            // 
+            this.cmdDelete.Location = new System.Drawing.Point(461, 137);
+            this.cmdDelete.Name = "cmdDelete";
+            this.cmdDelete.Size = new System.Drawing.Size(75, 23);
+            this.cmdDelete.TabIndex = 19;
+            this.cmdDelete.Text = "Delete";
+            this.cmdDelete.UseVisualStyleBackColor = true;
+            // 
+            // cmdAdd
+            // 
+            this.cmdAdd.Location = new System.Drawing.Point(461, 75);
+            this.cmdAdd.Name = "cmdAdd";
+            this.cmdAdd.Size = new System.Drawing.Size(75, 23);
+            this.cmdAdd.TabIndex = 18;
+            this.cmdAdd.Text = "Add";
+            this.cmdAdd.UseVisualStyleBackColor = true;
+            // 
             // Pegawai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmdFind);
+            this.Controls.Add(this.cmdSave);
+            this.Controls.Add(this.cmdDelete);
+            this.Controls.Add(this.cmdAdd);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -286,5 +330,9 @@
         private WarungDataSet warungDataSet;
         private System.Windows.Forms.BindingSource pegawaiBindingSource;
         private WarungDataSetTableAdapters.PegawaiTableAdapter pegawaiTableAdapter;
+        private System.Windows.Forms.Button cmdFind;
+        private System.Windows.Forms.Button cmdSave;
+        private System.Windows.Forms.Button cmdDelete;
+        private System.Windows.Forms.Button cmdAdd;
     }
 }

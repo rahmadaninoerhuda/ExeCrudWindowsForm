@@ -30,14 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Barang));
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.daftarBarangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.warungDataSet = new ExeCrudWindowsForm.WarungDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -48,65 +44,22 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.warungDataSet = new ExeCrudWindowsForm.WarungDataSet();
-            this.daftarBarangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.daftar_BarangTableAdapter = new ExeCrudWindowsForm.WarungDataSetTableAdapters.Daftar_BarangTableAdapter();
+            this.cmdFind = new System.Windows.Forms.Button();
+            this.cmdSave = new System.Windows.Forms.Button();
+            this.cmdDelete = new System.Windows.Forms.Button();
+            this.cmdAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.warungDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.daftarBarangBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warungDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 222);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 17);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Harga";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 156);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 17);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Nama Barang";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 94);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 17);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Kode Barang";
-            // 
-            // textBox3
-            // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.daftarBarangBindingSource, "Harga", true));
-            this.textBox3.Location = new System.Drawing.Point(224, 222);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 10;
-            // 
-            // textBox2
-            // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.daftarBarangBindingSource, "Nama_Barang", true));
-            this.textBox2.Location = new System.Drawing.Point(224, 156);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 9;
-            // 
-            // textBox1
-            // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.daftarBarangBindingSource, "Kode_Barang", true));
-            this.textBox1.Location = new System.Drawing.Point(224, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 8;
             // 
             // bindingNavigator1
             // 
@@ -135,7 +88,7 @@
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
             this.bindingNavigator1.Size = new System.Drawing.Size(800, 27);
-            this.bindingNavigator1.TabIndex = 7;
+            this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
@@ -146,6 +99,16 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // daftarBarangBindingSource
+            // 
+            this.daftarBarangBindingSource.DataMember = "Daftar_Barang";
+            this.daftarBarangBindingSource.DataSource = this.warungDataSet;
+            // 
+            // warungDataSet
+            // 
+            this.warungDataSet.DataSetName = "WarungDataSet";
+            this.warungDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -224,31 +187,112 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // warungDataSet
+            // label1
             // 
-            this.warungDataSet.DataSetName = "WarungDataSet";
-            this.warungDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(51, 90);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "KodeBarang";
             // 
-            // daftarBarangBindingSource
+            // label2
             // 
-            this.daftarBarangBindingSource.DataMember = "Daftar_Barang";
-            this.daftarBarangBindingSource.DataSource = this.warungDataSet;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(51, 145);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "NamaBarang";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(51, 197);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 17);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Harga";
+            // 
+            // textBox1
+            // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.daftarBarangBindingSource, "Kode_Barang", true));
+            this.textBox1.Location = new System.Drawing.Point(250, 90);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 4;
+            // 
+            // textBox2
+            // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.daftarBarangBindingSource, "Nama_Barang", true));
+            this.textBox2.Location = new System.Drawing.Point(250, 145);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 5;
+            // 
+            // textBox3
+            // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.daftarBarangBindingSource, "Harga", true));
+            this.textBox3.Location = new System.Drawing.Point(250, 197);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 22);
+            this.textBox3.TabIndex = 6;
             // 
             // daftar_BarangTableAdapter
             // 
             this.daftar_BarangTableAdapter.ClearBeforeFill = true;
+            // 
+            // cmdFind
+            // 
+            this.cmdFind.Location = new System.Drawing.Point(577, 152);
+            this.cmdFind.Name = "cmdFind";
+            this.cmdFind.Size = new System.Drawing.Size(75, 23);
+            this.cmdFind.TabIndex = 25;
+            this.cmdFind.Text = "Find";
+            this.cmdFind.UseVisualStyleBackColor = true;
+            // 
+            // cmdSave
+            // 
+            this.cmdSave.Location = new System.Drawing.Point(577, 90);
+            this.cmdSave.Name = "cmdSave";
+            this.cmdSave.Size = new System.Drawing.Size(75, 23);
+            this.cmdSave.TabIndex = 24;
+            this.cmdSave.Text = "Save";
+            this.cmdSave.UseVisualStyleBackColor = true;
+            // 
+            // cmdDelete
+            // 
+            this.cmdDelete.Location = new System.Drawing.Point(428, 152);
+            this.cmdDelete.Name = "cmdDelete";
+            this.cmdDelete.Size = new System.Drawing.Size(75, 23);
+            this.cmdDelete.TabIndex = 23;
+            this.cmdDelete.Text = "Delete";
+            this.cmdDelete.UseVisualStyleBackColor = true;
+            // 
+            // cmdAdd
+            // 
+            this.cmdAdd.Location = new System.Drawing.Point(428, 90);
+            this.cmdAdd.Name = "cmdAdd";
+            this.cmdAdd.Size = new System.Drawing.Size(75, 23);
+            this.cmdAdd.TabIndex = 22;
+            this.cmdAdd.Text = "Add";
+            this.cmdAdd.UseVisualStyleBackColor = true;
             // 
             // Barang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmdFind);
+            this.Controls.Add(this.cmdSave);
+            this.Controls.Add(this.cmdDelete);
+            this.Controls.Add(this.cmdAdd);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "Barang";
             this.Text = "Barang";
@@ -256,8 +300,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.warungDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.daftarBarangBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warungDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,12 +309,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -283,8 +321,18 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
         private WarungDataSet warungDataSet;
         private System.Windows.Forms.BindingSource daftarBarangBindingSource;
         private WarungDataSetTableAdapters.Daftar_BarangTableAdapter daftar_BarangTableAdapter;
+        private System.Windows.Forms.Button cmdFind;
+        private System.Windows.Forms.Button cmdSave;
+        private System.Windows.Forms.Button cmdDelete;
+        private System.Windows.Forms.Button cmdAdd;
     }
 }
